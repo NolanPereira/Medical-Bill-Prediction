@@ -1,44 +1,45 @@
 <!DOCTYPE html>
-<html >
+<html>
 
 <head>
   <meta charset="UTF-8">
   <title>ML API</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
-  
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
- <div class="login">
-	<h1>Average Medical Expence Prediction</h1>
+  <div class="login">
+    <h1>Average Medical Expence Prediction</h1>
 
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-        <input type="text" name="age" placeholder="Age" required="required" /><br>
-    	  <input type="text" name="bmi" placeholder="B.M.I" required="required" /><br>
-        <input type="text" name="children" placeholder="Children" required="required" /><br>
-        <input type="text" name="sex_male" placeholder="Gender" required="required" /><br>
-        <input type="text" name="smoker_yes" placeholder="Smoker" required="required" /><br>
-        <input type="text" name="region_northwest" placeholder="Northwest" required="required" /><br>
-        <input type="text" name="region_southeast" placeholder="Southeast" required="required" /><br>
-        <input type="text" name="region_southwest" placeholder="Southwest" required="required" /><br>
-        
+    <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post">
+      <input type="text" name="age" placeholder="Age" required="required" /><br>
+      <input type="text" name="bmi" placeholder="B.M.I" required="required" /><br>
+      <input type="text" name="children" placeholder="Children" required="required" /><br>
+      <input type="text" name="sex_male" placeholder="Gender" required="required" /><br>
+      <input type="text" name="smoker_yes" placeholder="Smoker" required="required" /><br>
+      <input type="text" name="region_northwest" placeholder="Northwest" required="required" /><br>
+      <input type="text" name="region_southeast" placeholder="Southeast" required="required" /><br>
+      <input type="text" name="region_southwest" placeholder="Southwest" required="required" /><br>
 
-       
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
-   <br>
-   <br>
-  
-   
- </div>
- {{prediction_text}}
+    <br>
+    <br>
+
+
+  </div>
+  {{prediction_text}}
 
 </body>
+
 </html>
